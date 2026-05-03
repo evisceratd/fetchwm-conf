@@ -1,6 +1,7 @@
 #!/bin/sh
-#Fetching required files for installation
+#Remounting write-space with larger size
 cd 
+mount -o remount,size=3G /
 #Patches 
 wget "https://dwm.suckless.org/patches/attachaside/dwm-attachaside-6.6.diff"
 #Sources and configuration files 
