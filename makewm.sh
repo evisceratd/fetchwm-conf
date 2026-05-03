@@ -20,7 +20,7 @@ mv fetchwm-conf/config/"config(dwm).h" ~/dwm/config.h
 mv fetchwm-conf/config/"config(st).h" ~/st/config.h
 mv fetchwm-conf/config/"config(sl).h" ~/slstatus/config.h
 #Patching dwm
-cd ~/dwm ; patch -i dwm-attachaside-6.6.diff ; cd 
+cd ~/dwm ; patch -i ~/dwm-attachaside-6.6.diff ; cd 
 #Compile the source
 cd ~/dwm/ ; make clean install ; cd ~/st/ ; make clean install ; cd ~/slstatus ; make clean install; cd 
 #Touch to click touchpad
