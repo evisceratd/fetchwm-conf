@@ -13,7 +13,7 @@ git clone https://github.com/evisceratd/fetchwm-conf.git
 apk add git gcc make g++ libx11-dev libxinerama-dev libxft-dev ncurses linux-headers patch font-noto tlp alsa-utils brightnessctl dmenu dbus dbus-x11 picom elogind firefox pcmanfm fastfetch
 #Installing xorg-server
 setup-xorg-base 
-#xinit file
+#creating user xinit file
 echo -e "slstatus &\npicom --backend glx --vsync &\n exec dbus-run-session dwm" > ~/.xinitrc
 #Moving files to appropriate dir
 mv fetchwm-conf/config/"config(dwm).h" ~/dwm/config.h
