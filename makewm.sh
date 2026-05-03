@@ -24,5 +24,11 @@ cd ~/dwm ; patch -i dwm-attachaside-6.6.diff ; cd
 cd ~/dwm/ ; make clean install ; cd ~/st/ ; make clean install ; cd ~/slstatus ; make clean install; cd 
 #Touch to click touchpad
 mkdir -p /etc/X11/xorg.conf.d && echo -e 'Section "InputClass"\n    Identifier "libinput touchpad catchall"\n    MatchIsTouchpad "on"\n    Driver "libinput"\n    Option "Tapping" "on"\nEndSection' | tee /etc/X11/xorg.conf.d/30-touchpad.conf > /dev/null
+#Starting services
+rc-service dbus start ; rc-service elogind start ; rc-service add dbus ; rc-service add elogind 
+#Uninstalling dev packages
+apk del gcc make g++ libx11-dev libxinerama-dev libxft-dev ncurses linux-headers patch 
+#Removing source files
+cd ; rm -rf ./dwm ./st ./slstatus ./dwm-attachaside-6.6.diff
 #Starting the WM
 startx 
