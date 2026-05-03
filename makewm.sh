@@ -29,6 +29,6 @@ rc-service dbus start ; rc-service elogind start ; rc-service add dbus ; rc-serv
 #Uninstalling dev packages
 apk del gcc make g++ libx11-dev libxinerama-dev libxft-dev ncurses linux-headers patch 
 #Removing source files
-cd ; rm -rf ./dwm ./st ./slstatus ./dwm-attachaside-6.6.diff
+cd ; rm -rf ./dwm ./st ./slstatus ./dwm-attachaside-6.6.diff ./fetchwm-conf 
 #Starting the WM
 startx 
