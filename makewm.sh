@@ -22,5 +22,7 @@ mv fetchwm-conf/config/"config(sl).h" ~/slstatus/config.h
 cd ~/dwm ; patch -i dwm-attachaside-6.6.diff ; cd 
 #Compile the source
 cd ~/dwm/ ; make clean install ; cd ~/st/ ; make clean install ; cd ~/slstatus ; make clean install; cd 
+#Touch to click touchpad
+mkdir -p /etc/X11/xorg.conf.d && echo -e 'Section "InputClass"\n    Identifier "libinput touchpad catchall"\n    MatchIsTouchpad "on"\n    Driver "libinput"\n    Option "Tapping" "on"\nEndSection' | tee /etc/X11/xorg.conf.d/30-touchpad.conf > /dev/null
 #Starting the WM
 startx 
