@@ -1,0 +1,2 @@
+#Required pkgs in Alpine
+  gvfs udisks2 polkit xfce-polkit ntfs-3g
