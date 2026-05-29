@@ -1,0 +1,3 @@
+//Alpine linux
+#Packages for drive automounting and permission handling
+* gvfs udisks2 polkit xfce-polkit ntfs-3g
