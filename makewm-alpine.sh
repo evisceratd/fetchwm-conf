@@ -29,6 +29,8 @@ mkdir -p /etc/X11/xorg.conf.d && echo -e 'Section "InputClass"\n    Identifier "
 rc-service dbus start ; rc-service elogind start ; rc-update add dbus ; rc-update add elogind 
 #Uninstalling dev packages
 apk del gcc make g++ libx11-dev libxinerama-dev libxft-dev ncurses linux-headers patch 
+#Leaving Tips
+cd ; mv ./fetchwm-conf/tips.txt ~/tips.txt
 #Removing source files
 cd ; rm -rf ./dwm ./st ./slstatus ./dwm-attachaside-6.6.diff ./fetchwm-conf 
 #Starting the WM
