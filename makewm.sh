@@ -10,7 +10,7 @@ git clone git://git.suckless.org/st
 git clone git://git.suckless.org/slstatus
 git clone https://github.com/evisceratd/fetchwm-conf.git
 #Necesssary packages
-apk add git gcc make g++ libx11-dev libxinerama-dev libxft-dev ncurses linux-headers patch font-noto tlp alsa-utils brightnessctl dmenu dbus dbus-x11 picom elogind firefox pcmanfm fastfetch
+apk add git gcc make g++ libx11-dev libxinerama-dev libxft-dev ncurses linux-headers patch font-noto tlp alsa-utils brightnessctl dmenu dbus dbus-x11 picom elogind pcmanfm fastfetch
 #Installing xorg-server
 setup-xorg-base 
 #creating user xinit file
@@ -26,7 +26,7 @@ cd ~/dwm/ ; make clean install ; cd ~/st/ ; make clean install ; cd ~/slstatus ;
 #Touch to click touchpad
 mkdir -p /etc/X11/xorg.conf.d && echo -e 'Section "InputClass"\n    Identifier "libinput touchpad catchall"\n    MatchIsTouchpad "on"\n    Driver "libinput"\n    Option "Tapping" "on"\nEndSection' | tee /etc/X11/xorg.conf.d/30-touchpad.conf > /dev/null
 #Starting services
-rc-service dbus start ; rc-service elogind start ; rc-service add dbus ; rc-service add elogind 
+rc-service dbus start ; rc-service elogind start ; rc-update add dbus ; rc-update add elogind 
 #Uninstalling dev packages
 apk del gcc make g++ libx11-dev libxinerama-dev libxft-dev ncurses linux-headers patch 
 #Removing source files
